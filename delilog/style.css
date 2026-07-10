@@ -1,0 +1,49 @@
+/* デリログ 法的ページ共通スタイル(アプリのエディトリアルデザインに準拠) */
+:root {
+  --paper: #F4F1EC;
+  --card: #FFFFFF;
+  --ink: #16181D;
+  --muted: #6f6a5e;
+  --accent: #FF6B1A;
+  --border: #E4DFD6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #121110;
+    --card: #1E1D1B;
+    --ink: #F3F1EB;
+    --muted: #9B968B;
+    --accent: #FF7C33;
+    --border: #35332E;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  line-height: 1.85;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
+.eyebrow {
+  color: var(--accent); font-weight: 800; letter-spacing: 2px;
+  font-size: 13px; margin: 0 0 6px;
+}
+h1 { font-size: 30px; font-weight: 900; margin: 0 0 6px; }
+h2 { font-size: 19px; font-weight: 800; margin: 34px 0 10px; }
+.updated { color: var(--muted); font-size: 13px; margin: 0 0 8px; font-weight: 600; }
+p, li { font-size: 15px; }
+a { color: var(--accent); text-decoration: none; font-weight: 700; }
+a:hover { text-decoration: underline; }
+ul { padding-left: 1.2em; }
+.card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 18px 20px; margin: 18px 0;
+}
+.note { color: var(--muted); font-size: 13px; }
+hr { border: none; border-top: 1px solid var(--border); margin: 36px 0; }
+.nav { margin-bottom: 26px; font-size: 14px; }
+.nav a { margin-right: 16px; }
+footer { color: var(--muted); font-size: 13px; margin-top: 40px; }
