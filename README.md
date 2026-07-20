@@ -20,6 +20,22 @@ cd ~/app-legal
 実行すると `myapp2/` フォルダにページが生成され、GitHubへpush・Pages公開まで自動で行われる。
 完了後に表示されるURLを、アプリの `AppConfig` や App Store Connect に設定する。
 
+### ⚠️ 忘れずに: ルートのアプリ一覧に追記する
+
+`new-app.sh` は `<スラッグ>/` を作るだけで、**ルートの `index.html`(アプリ一覧)は自動更新されない**。
+生成後に手動で1行足すこと。ここに入れないと
+`https://turtle467.github.io/app-legal/` の一覧からたどれないアプリになる。
+
+`index.html` の `<h2>アプリ一覧</h2>` 直後の `<ul>` に、既存行にならって追記:
+
+```html
+<li><a href="myapp2/">マイアプリ2</a> — 写真を整理するアプリ</li>
+```
+
+```bash
+git add -A && git commit -m "Add マイアプリ2 to app list on root index" && git push
+```
+
 ## 運営者名・メールを変更する
 
 `kit/config.json` を編集して、各アプリのページを再生成(`new-app.sh` を再実行)するか、
