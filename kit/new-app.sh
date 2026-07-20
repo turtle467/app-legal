@@ -51,6 +51,10 @@ for f in ['privacy.html','terms.html','index.html','style.css']:
 print("generated", slug)
 PY
 
+# ルート index.html のアプリ一覧へ追記(既にあれば名前・説明を更新)。
+# ここを忘れると一覧からたどれないアプリになるため、生成と同時に自動で行う。
+python3 "$SCRIPT_DIR/update-index.py" "$SLUG" "$NAME" "$DESC" "$ROOT/index.html"
+
 git add -A
 git commit -q -m "Add legal pages for $SLUG ($NAME)" || echo "(変更なし)"
 
@@ -72,6 +76,7 @@ echo "-------------------------------------------------------------"
 echo "プライバシーポリシー: $BASE/privacy.html"
 echo "利用規約            : $BASE/terms.html"
 echo "トップ(お問い合わせ): $BASE/"
+echo "アプリ一覧          : https://$GH_USER.github.io/$REPO/ (追記済み)"
 echo "-------------------------------------------------------------"
 echo "アプリの AppConfig 等に上記URLを設定してください。"
 echo "位置情報など個別機能の記載が必要なら $SLUG/privacy.html を編集し、"

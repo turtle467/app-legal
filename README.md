@@ -8,7 +8,7 @@
 ## 新しいアプリのページを追加する
 
 ```bash
-cd ~/app-legal
+cd ~/app_develop/app-legal
 ./kit/new-app.sh <スラッグ> "<アプリ名>" "<説明文>" [アクセント色]
 ```
 
@@ -20,20 +20,20 @@ cd ~/app-legal
 実行すると `myapp2/` フォルダにページが生成され、GitHubへpush・Pages公開まで自動で行われる。
 完了後に表示されるURLを、アプリの `AppConfig` や App Store Connect に設定する。
 
-### ⚠️ 忘れずに: ルートのアプリ一覧に追記する
+### ルートのアプリ一覧について
 
-`new-app.sh` は `<スラッグ>/` を作るだけで、**ルートの `index.html`(アプリ一覧)は自動更新されない**。
-生成後に手動で1行足すこと。ここに入れないと
-`https://turtle467.github.io/app-legal/` の一覧からたどれないアプリになる。
+ルート `index.html` の**アプリ一覧への追記は `new-app.sh` が自動で行う**(`kit/update-index.py`)。
+手で足す必要はない。ここに載らないと
+`https://turtle467.github.io/app-legal/` の一覧からたどれないアプリになるため、生成と同時に処理している。
 
-`index.html` の `<h2>アプリ一覧</h2>` 直後の `<ul>` に、既存行にならって追記:
+- 同じスラッグで再実行すると、行が重複せずアプリ名・説明文が**更新**される。
+- 一覧の `<ul>` が見つからない等で追記できなかった場合は、貼り付ける用の1行を表示して続行する。
+  その場合だけ `index.html` に手で足して `git add -A && git commit && git push`。
 
-```html
-<li><a href="myapp2/">マイアプリ2</a> — 写真を整理するアプリ</li>
-```
+一覧だけ直したいときは、単体でも実行できる:
 
 ```bash
-git add -A && git commit -m "Add マイアプリ2 to app list on root index" && git push
+python3 kit/update-index.py <スラッグ> "<アプリ名>" "<説明文>" index.html
 ```
 
 ## 運営者名・メールを変更する
@@ -54,6 +54,7 @@ app-legal/
 ├── kit/
 │   ├── config.json        ← 共有の運営者情報(name/email/githubUser/repo)
 │   ├── new-app.sh         ← 新アプリ生成＋公開コマンド
+│   ├── update-index.py    ← ルートのアプリ一覧へ追記(new-app.shが自動で呼ぶ)
 │   └── templates/         ← privacy/terms/index/style の雛形
 ├── delilog/               ← 各アプリのページ(公開される)
 │   ├── privacy.html
