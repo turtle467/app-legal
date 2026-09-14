@@ -1,0 +1,63 @@
+:root {
+  --paper: #fff7e8;
+  --card: #ffffff;
+  --ink: #3d342f;
+  --muted: #75685f;
+  --accent: #e86f51;
+  --accent-2: #55a98c;
+  --border: #eadbc8;
+  --shadow: rgba(122, 85, 55, .12);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #211c1a;
+    --card: #302824;
+    --ink: #fff4df;
+    --muted: #cbbcaf;
+    --accent: #ff9678;
+    --accent-2: #79caae;
+    --border: #4b3e37;
+    --shadow: rgba(0, 0, 0, .22);
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(255, 202, 104, .18), transparent 28rem),
+    var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  line-height: 1.85;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 36px 20px 80px; }
+.nav { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-bottom: 28px; font-size: 14px; }
+.nav a { white-space: nowrap; }
+.eyebrow { color: var(--accent); font-weight: 800; letter-spacing: 2px; font-size: 13px; margin: 0 0 6px; }
+h1 { font-size: clamp(28px, 7vw, 38px); line-height: 1.35; font-weight: 900; margin: 0 0 8px; }
+h2 { font-size: 20px; line-height: 1.55; font-weight: 800; margin: 34px 0 10px; }
+.lead { font-size: 17px; }
+.updated { color: var(--muted); font-size: 13px; margin: 0 0 16px; font-weight: 600; }
+p, li { font-size: 15px; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; font-weight: 700; }
+ul { padding-left: 1.3em; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px 22px;
+  margin: 20px 0;
+  box-shadow: 0 8px 24px var(--shadow);
+}
+.card h2 { margin-top: 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.button { display: inline-block; color: #fff; background: var(--accent); border-radius: 13px; padding: 10px 16px; text-decoration: none; }
+.button.secondary { background: var(--accent-2); }
+.note { color: var(--muted); font-size: 13px; }
+footer { color: var(--muted); font-size: 13px; margin-top: 44px; }
+@media (max-width: 520px) {
+  .wrap { padding: 24px 16px 64px; }
+  .card { padding: 18px; }
+}
