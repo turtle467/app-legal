@@ -1,0 +1,122 @@
+{
+  "schema": 1,
+  "games": [
+    {
+      "id": "deepsea",
+      "order": 1,
+      "appStoreID": "6816334134",
+      "name": "深海8000",
+      "icon": "icon/deepsea-icon-v1.png",
+      "trailer": {
+        "video": "video/deepsea-v1.mp4",
+        "poster": "poster/deepsea-v1.jpg",
+        "caption": "",
+        "seconds": 22.7,
+        "videoBytes": 1976442,
+        "videoSHA256": "4ab06dc047557497204cc7864f4f22dd70c2230242b4d7e00ff25a6ee8ca2bc7",
+        "posterBytes": 32281,
+        "posterSHA256": "5ba951f01da74db1e0305649e6ac85c2db46b64089e426da4424f6ca46cb1529"
+      },
+      "tagline": "潜水艦を自分で操縦して、深海生物を集める放置育成ゲーム。集めた生き物は水槽でおしゃべりします。",
+      "summary": "指一本で潜水艦を操縦し、海の生き物を迎えに行こう。連れ帰った生き物は水槽でおしゃべりし、お客さんを呼んでくれる。",
+      "points": [
+        {
+          "title": "自分で操縦して迎える",
+          "body": "指一本で潜水艦を動かし、生き物に近づいてアームで回収。大物には引っ張られる！"
+        },
+        {
+          "title": "実在の深海生物47種",
+          "body": "ラブカ、リュウグウノツカイ、シーラカンス……。深く潜るほど暗くなり、見たことのない姿に出会えます。"
+        },
+        {
+          "title": "しゃべる水槽",
+          "body": "連れ帰った生き物は大きな水槽で泳ぎ、休み、おしゃべり。拡大すると会話が読めます。"
+        }
+      ],
+      "listed": true,
+      "iconBytes": 48811,
+      "iconSHA256": "c3eb12bf2a392a956a2458c0f42e155e367e5140914a6f9bdd24283eddcad2ea"
+    },
+    {
+      "id": "shiba",
+      "order": 2,
+      "appStoreID": "6803982342",
+      "name": "しばいぬ王国",
+      "icon": "icon/shiba-icon-v1.png",
+      "trailer": {
+        "video": "video/shiba-v1.mp4",
+        "poster": "poster/shiba-v1.jpg",
+        "caption": "",
+        "seconds": 25.0,
+        "videoBytes": 2222568,
+        "videoSHA256": "c57ea62c01360f100f2a2361bce64417a4eae258be2d8c011b2b1e55812edb5e",
+        "posterBytes": 95284,
+        "posterSHA256": "a598f847d84fdb48c1c3d128970d68c913e0b15137ea2b66d4e3f4d9c6272e31"
+      },
+      "tagline": "柴犬を集めて王国を育てる放置クリッカー。タップと放置で、骨の数がどんどん伸びていきます。",
+      "summary": "タップで骨が増える。仲間の柴犬が増える。小さな広場が、にぎやかな王国に育っていく。",
+      "points": [
+        {
+          "title": "タップと放置で骨を集めよう",
+          "body": "仲間になった柴犬たちは、アプリを閉じている間も骨を集めてくれます。"
+        },
+        {
+          "title": "個性豊かな柴犬をお迎え",
+          "body": "骨を使って新しい柴犬をお迎え。広場でのんびり過ごす柴犬たちの姿を楽しみながら、図鑑を埋めていきましょう。"
+        },
+        {
+          "title": "フィーバーで一気に加速",
+          "body": "フィーバーが始まると骨集めが大幅アップ。数字が勢いよく伸びる爽快な時間を楽しめます。"
+        }
+      ],
+      "listed": true,
+      "iconBytes": 70608,
+      "iconSHA256": "e2b3ef23bde970fd9ee88bf1cbd907659af715863378cd53f64a3b05e04a821d"
+    },
+    {
+      "id": "machigai",
+      "order": 3,
+      "appStoreID": "6818784251",
+      "name": "まちがい町",
+      "icon": "icon/machigai-icon-v1.png",
+      "trailer": {
+        "video": "video/machigai-v1.mp4",
+        "poster": "poster/machigai-v1.jpg",
+        "caption": "",
+        "seconds": 28.0,
+        "videoBytes": 2952073,
+        "videoSHA256": "815451f0cea19780bbeb6933b69707b9ce5e4dc420cb5c49b07d4a6239e8c8c7",
+        "posterBytes": 85820,
+        "posterSHA256": "2b59a4a606e74402d9b66b88807fbcb7595a9e5c749d089701b4e8120bd7a4eb"
+      },
+      "tagline": "絵が動く間違い探し。問題は無限で時間切れもなく、のんびり遊べます。",
+      "summary": "手描きの絵がゆらゆら動く、新しい間違い探し。町のご近所さんと仲良くなりながら、のんびり見つけよう。",
+      "points": [
+        {
+          "title": "絵が動く、間違い探し",
+          "body": "小物がゆれたり、住人が歩いたり。片方だけ動いている物を、見つけられる？"
+        },
+        {
+          "title": "問題は無限に",
+          "body": "問題は毎回ちがう組み立てで作られます。町のみんなと仲良くなった後も、おかわりの問題がずっと続きます。"
+        },
+        {
+          "title": "のんびり遊べる",
+          "body": "時間切れはありません。困った時は、電球のヒントがあります。"
+        }
+      ],
+      "listed": true,
+      "iconBytes": 53081,
+      "iconSHA256": "d6e7cb2627d7ce56d00b4cd82e6361a6cc7365329fb6cab1ce08044887e911ab"
+    }
+  ],
+  "notices": [
+    {
+      "id": "2026-list-launch",
+      "kind": "listLaunch",
+      "date": "",
+      "title": "作者のほかのゲームを紹介するページをつくりました",
+      "lead": "{app}を遊んでくださって、ありがとうございます。同じ作者がつくったゲームを、短い動画つきで紹介しています。"
+    }
+  ]
+}

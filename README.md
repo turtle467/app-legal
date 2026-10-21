@@ -47,6 +47,20 @@ python3 kit/update-index.py <スラッグ> "<アプリ名>" "<説明文>" index.
 生成後の `<アプリ>/privacy.html` にその用途と停止方法を追記すること
 (雛形内にコメントで追記位置を示してある)。
 
+## 作者だより（author-news/）
+
+自作ゲーム間の相互紹介（`~/app_develop/AuthorNews` のパッケージ）が読む `feed.json` と、アイコン・紹介動画。
+**手で編集しない。** 中身を変える時は AuthorNews 側の `content/` を直して、次で書き出す。
+
+```bash
+cd ~/app_develop/AuthorNews
+python3 tools/build_feed.py ~/app_develop/app-legal/author-news/v1
+```
+
+- `author-news/v1/feed.json` の場所は、配布済みのアプリが読みに来るので**変えない・消さない**。
+- 各ファイルのバイト数とSHA-256は `feed.json` に入っている。ファイルだけ差し替えると、アプリは検証に通らないとして使わない。
+- ルートのアプリ一覧（`index.html`）には載せない（法務ページではないため）。
+
 ## 構成
 
 ```
